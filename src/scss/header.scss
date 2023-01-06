@@ -1,14 +1,7 @@
 .header {
   min-height: 100vh;
-  margin-top: 50px;
-  //background: #F9FCFF;
   &__row {
-    position: fixed;
-    z-index: 3;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(205, 225, 255, 0.2);
+    background: #F9FCFF;
   }
 
   &__profile {
@@ -20,7 +13,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .nav {
