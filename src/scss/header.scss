@@ -1,10 +1,17 @@
 .header {
   min-height: 100vh;
+  margin-top: 50px;
+  background: #F9FCFF;
   &__row {
-    background: #F9FCFF;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #CDE1FF;
   }
 
   &__profile {
+    margin-top: 30px;
   }
 }
 
@@ -30,7 +37,7 @@
   transition: 1s;
 
   &:hover {
-    color: #35B3A9;
+    color: #CDE1FF;
   }
 
 }
@@ -61,34 +68,71 @@
   }
 }
 
+
 .profile {
-
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   &__avatar {
+
   }
 
   &__title {
+
   }
 
   &__order {
   }
+
 }
 
 .avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 370px;
+  background: url("../assets/images/avatar-bg.svg") 0 0 / contain no-repeat;
+
+  &__wrapper {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    &>img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
 .title {
   &__name {
+    margin: 15px 0 5px 0;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 55px;
+    text-transform: uppercase;
   }
 
   &__profession {
+    margin-top: 0;
   }
 }
 
 .order {
+
   &__button {
   }
 
   &__description {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
   }
 }
