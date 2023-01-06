@@ -1,13 +1,14 @@
 .header {
   min-height: 100vh;
   margin-top: 50px;
-  background: #F9FCFF;
+  //background: #F9FCFF;
   &__row {
     position: fixed;
+    z-index: 3;
     width: 100%;
     top: 0;
     left: 0;
-    background: #CDE1FF;
+    background: rgba(205, 225, 255, 0.2);
   }
 
   &__profile {
@@ -30,7 +31,7 @@
   display: block;
   padding: 20px 15px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 30px;
   text-align: center;
   letter-spacing: 0.02em;
@@ -67,7 +68,6 @@
     height: 60%;
   }
 }
-
 
 .profile {
   display: flex;
@@ -113,7 +113,6 @@
 
 .title {
   &__name {
-    margin: 15px 0 5px 0;
     font-weight: 800;
     font-size: 50px;
     line-height: 55px;
