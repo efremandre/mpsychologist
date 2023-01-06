@@ -12,6 +12,17 @@ body {
 	color: #4D4D52;
 }
 
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #4D4D52;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -21,6 +32,7 @@ body {
 .container {
 	max-width: 1140px;
 	margin: 0 auto;
+	padding: 0 10px;
 }
 
 .button {
@@ -32,7 +44,6 @@ body {
 	height: 70px;
 
 	color: #FFFFFF;
-	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 16px;
