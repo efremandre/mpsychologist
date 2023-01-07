@@ -54,6 +54,13 @@
 }
 
 .text-block {
+  box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, .3);
+  transition: 1s;
+
+  &:hover {
+    box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, 1);
+  }
+
   &__name {
     margin: 15px 0;
     font-weight: 600;
