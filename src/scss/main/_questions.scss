@@ -12,7 +12,7 @@
     border-radius: 25px;
     background: #EBF5FF;
     box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, .3);
-    transition: 1s;
+    transition: .5s;
 
     &:hover {
       cursor: pointer;
@@ -23,7 +23,6 @@
 
   &__ask {
     position: relative;
-    margin-bottom: 15px;
     padding: 0;
     width: 100%;
     text-align: left;
@@ -41,7 +40,11 @@
 
   &__answer {
     &>p{
-      margin: 0;
+      margin: 15px 0 0 0;
+    }
+
+    &._active {
+      display: block;
     }
   }
 }
@@ -55,13 +58,14 @@
   width: 40px;
   height: 6px;
   background:  url('../../assets/images/minus.svg') 0 0 no-repeat;
-  transition: 1s;
+  transition: .3s;
 }
 
-._init.questions__ask::after::after {
+._init.questions__ask::after {
+  transform: rotate(90deg);
+}
+
+._init.questions__ask._active::after {
   transform: rotate(0);
 }
 
-._init.questions__ask::after._active::after {
-  transform: rotate(90deg);
-}
