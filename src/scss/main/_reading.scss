@@ -2,13 +2,10 @@
   padding: 20px 0;
   background: #CDE1FF34;
 
-  &__title {
-  }
-
   &__item {
     display: flex;
     justify-content: space-between;
-    margin: 0 -20px 30px -20px;
+    margin: 0 -20px;
     padding: 20px 0;
   }
 
@@ -58,10 +55,4 @@
     padding: 0 20px;
     background: url('../../assets/images/img-materials.svg') right top / contain no-repeat;
   }
-}
-
-.container {
-}
-
-.title {
 }
