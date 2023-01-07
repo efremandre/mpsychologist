@@ -1,0 +1,30 @@
+.about-me {
+  padding: 20px 0;
+  background: #CDE1FF34;
+
+  &__title {
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -20px 30px -20px;
+    padding: 10px 0;
+  }
+
+  &__image {
+    flex: 1 0 350px;
+    height: 350px;
+    padding: 0 20px;
+    background: url('../../assets/images/img-aboutme.svg') center center / cover no-repeat;
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    padding: 0 20px;
+
+    &>p{
+      margin: 15px 0;
+    }
+  }
+}

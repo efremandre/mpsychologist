@@ -1,5 +1,6 @@
 import fileInclude from 'gulp-file-include';
 import webpHtmlNosvg from 'gulp-webp-html-nosvg';
+import htmlbeautify from 'gulp-html-beautify';
 import pug from 'gulp-pug';
 
 export const html = () => {
@@ -18,6 +19,7 @@ export const html = () => {
 				webpHtmlNosvg()
 			)
 		)
+		.pipe(htmlbeautify({indentSize: 2}))
 		.pipe(app.gulp.dest(app.path.build.html))
 		.pipe(app.plugins.browsersync.stream());
 }

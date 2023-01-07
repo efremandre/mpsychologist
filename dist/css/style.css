@@ -383,24 +383,387 @@ template {
 }
 
 @font-face {
-  font-family: Roboto;
+  font-family: Montserrat;
   font-display: swap;
-  src: url("../assets/fonts/Roboto-Regular.woff2") format("woff2"), url("../assets/fonts/Roboto-Regular.woff") format("woff");
+  src: url("../assets/fonts/Montserrat-Bold.woff2") format("woff2"), url("../assets/fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../assets/fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../assets/fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../assets/fonts/Montserrat-Regular.woff2") format("woff2"), url("../assets/fonts/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
+<<<<<<< HEAD
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../assets/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../assets/fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+.header {
+  min-height: 100vh;
+}
+.header__row {
+  background: rgba(205, 225, 255, 0.2039215686);
+}
+.header__profile {
+  margin-top: 25px;
+}
+
+.navigation-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  margin-left: -15px;
+}
+
+.nav-link {
+  display: block;
+  padding: 20px 15px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  transition: 1s;
+}
+.nav-link:hover {
+  color: #35B3A9;
+}
+
+.social {
+  margin-right: -15px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background: #35B3A9;
+  transition: 1s;
+}
+.social-link:hover {
+  background: #11948b;
+}
+.social-link > img {
+  display: block;
+  width: 60%;
+  height: 60%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 370px;
+  background: url("../assets/images/avatar-bg.svg") 0 0/contain no-repeat;
+}
+.avatar__wrapper {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.avatar__wrapper > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-title__name {
+  margin: 15px;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 55px;
+  text-transform: uppercase;
+}
+.main-title__profession {
+  margin: 0 0 25px;
+}
+
+.about-me {
+  padding: 20px 0;
+  background: rgba(205, 225, 255, 0.2039215686);
+}
+.about-me__item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -20px 30px -20px;
+  padding: 10px 0;
+}
+.about-me__image {
+  flex: 1 0 350px;
+  height: 350px;
+  padding: 0 20px;
+  background: url("../../assets/images/img-aboutme.svg") center center/cover no-repeat;
+}
+.about-me__text {
+  flex: 1 1 auto;
+  padding: 0 20px;
+}
+.about-me__text > p {
+  margin: 15px 0;
+}
+
+.questions {
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+.questions__items {
+  padding: 20px 0;
+}
+.questions__item {
+  margin-bottom: 20px;
+  padding: 30px 60px 30px 30px;
+  border-radius: 25px;
+  background: #EBF5FF;
+  box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, 0.3);
+  transition: 0.5s;
+}
+.questions__item:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 3px 2px rgb(205, 225, 255);
+}
+.questions__ask {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  background: none;
+  outline: none;
+  border: none;
+}
+.questions__ask:hover {
+  cursor: pointer;
+}
+.questions__answer > p {
+  margin: 15px 0 0 0;
+}
+.questions__answer._active {
+  display: block;
+}
+
+._init.questions__ask::after,
+._init.questions__ask:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  width: 40px;
+  height: 6px;
+  background: url("../../assets/images/minus.svg") 0 0 no-repeat;
+  transition: 0.3s;
+}
+
+._init.questions__ask::after {
+  transform: rotate(90deg);
+}
+
+._init.questions__ask._active::after {
+  transform: rotate(0);
+}
+
+.reading {
+  padding: 20px 0;
+  background: rgba(205, 225, 255, 0.2039215686);
+}
+.reading__item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -20px;
+  padding: 20px 0;
+}
+.reading__list {
+  flex: 1 1 auto;
+  padding: 0 20px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+}
+.reading__content {
+  margin-bottom: 20px;
+}
+.reading__link {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background: #EBF5FF;
+  box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, 0.3);
+  transition: 1s;
+}
+.reading__link:hover {
+  box-shadow: 5px 5px 3px 2px rgb(205, 225, 255);
+}
+.reading__link:last-child {
+  margin-bottom: 0;
+}
+.reading__subtitle {
+  margin: 10px 0;
+  font-size: 20px;
+}
+.reading__description {
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  font-size: 16px;
+}
+.reading__image {
+  flex: 1 0 390px;
+  height: 390px;
+  padding: 0 20px;
+  background: url("../../assets/images/img-materials.svg") right top/contain no-repeat;
+}
+
+.feedback {
+  padding: 20px 0 40px;
+}
+.feedback__items {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -20px 30px -20px;
+  padding: 15px 0 10px 0;
+}
+.feedback__card {
+  flex: 0 1 33.333%;
+  padding: 0 20px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 100px;
+}
+.card__photo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  top: -100px;
+  background: url("../../assets/images/bg-feedback.svg") center center/contain no-repeat;
+}
+.card__photo-wrapper {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.card__photo-wrapper > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.card__text-block {
+  padding: 100px 10px 10px;
+  background: #EBF5FF;
+  border-radius: 20px;
+}
+
+.text-block {
+  box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, 0.3);
+  transition: 1s;
+}
+.text-block:hover {
+  box-shadow: 5px 5px 3px 2px rgb(205, 225, 255);
+}
+.text-block__name {
+  margin: 15px 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+}
+.text-block__description {
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.main {
+  flex: 1 1 auto;
+  background: #FFFFFF;
+}
+
+.footer {
+  padding: 10px 0 20px 0;
+  background: #F9FCFF;
+=======
 
 .main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+>>>>>>> gh-pages
 }
 
 html,
 body {
   height: 100%;
-  font-family: "Roboto", sans-serif;
-  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #4D4D52;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: inherit;
+  opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #CDE1FF;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #4D4D52;
 }
 
 .wrapper {
@@ -415,14 +778,52 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1140px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
-h2 {
+.title {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 130%;
   text-align: center;
 }
 
+<<<<<<< HEAD
+.order {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 380px;
+  height: 60px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  background: #35B3A9;
+  border-radius: 15px;
+  box-shadow: 5px 5px 3px 2px rgb(205, 225, 255);
+  transition: 1s;
+}
+.button:hover {
+  background: #11948b;
+  box-shadow: none;
+}
+
+.description {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+=======
 @media screen and (max-width: 1200px) {
   .container {
     width: 960px;
@@ -449,4 +850,5 @@ h2 {
   .container {
     width: 95%;
   }
+>>>>>>> gh-pages
 }

@@ -1,6 +1,6 @@
 import * as testWebP from './modules/function.js';
-import { sayHi } from './modules/sayhi.js';
+import { _questions } from './modules/_questions.js';
 
 testWebP.isWebp();
 
-sayHi();
+_questions();
