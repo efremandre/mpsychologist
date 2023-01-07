@@ -1,4 +1,7 @@
-@use 'about-me';
+@use '_about-me';
+@use '_questions';
+@use '_reading';
+@use '_feedback';
 
 .main {
 	flex: 1 1 auto;
