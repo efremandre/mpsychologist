@@ -1,0 +1,67 @@
+.reading {
+  padding: 20px 0;
+  background: #CDE1FF34;
+
+  &__title {
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -20px 30px -20px;
+    padding: 20px 0;
+  }
+
+  &__list {
+    flex: 1 1 auto;
+    padding: 0 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+  }
+
+  &__content {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background: #EBF5FF;
+    box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, .3);
+    transition: 1s;
+
+    &:hover {
+      box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, 1);
+    }
+  }
+
+  &__link:last-child {
+    margin-bottom: 0;
+  }
+
+  &__subtitle {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+
+  &__description {
+    margin: 0 0 10px 0;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__image {
+    flex: 1 0 390px;
+    height: 390px;
+    padding: 0 20px;
+    background: url('../../assets/images/img-materials.svg') right top / contain no-repeat;
+  }
+}
+
+.container {
+}
+
+.title {
+}
