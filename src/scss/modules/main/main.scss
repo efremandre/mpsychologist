@@ -1,0 +1,10 @@
+@use 'service';
+@use 'about-me';
+@use 'questions';
+@use 'reading';
+@use 'feedback';
+
+.main {
+	flex: 1 1 auto;
+	background: #FFFFFF;
+}
