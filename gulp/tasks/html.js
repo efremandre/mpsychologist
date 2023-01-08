@@ -12,7 +12,6 @@ export const html = () => {
 		// 	// показывать в терминале какой файл обработан
 		// 	verbose: true,
 		// }))
-		.pipe(app.plugins.replace(/@img\//g, 'assets/images/'))
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
@@ -20,6 +19,8 @@ export const html = () => {
 			)
 		)
 		.pipe(htmlbeautify({indentSize: 2}))
+		.pipe(app.plugins.replace(/\.\.\/\.\.\/assets\//g, "./assets/"))
+		.pipe(app.plugins.replace(/\.\.\/\.\.\/files\//g, "./files/"))
 		.pipe(app.gulp.dest(app.path.build.html))
 		.pipe(app.plugins.browsersync.stream());
 }

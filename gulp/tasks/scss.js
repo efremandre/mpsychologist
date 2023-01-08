@@ -11,7 +11,6 @@ const sass = gulpSass(dartSass)
 
 export const scss = () => {
 	return app.gulp.src(app.path.src.scss, { sourcemap: app.isDev })
-		.pipe(app.plugins.replace(/@img\//g, '../assets/images/'))
 		.pipe(sass({
 			outputStyle: 'expanded',
 		}))
@@ -40,8 +39,7 @@ export const scss = () => {
 				})
 			)
 		)
-		// выгружает два файло минимизированный и нет, если не нужен не мин, то строку ниже закомментить
-		.pipe(app.gulp.dest(app.path.build.css))
+		.pipe(app.plugins.replace(/\.\.\/\.\.\/assets\//g, "../assets/"))
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
