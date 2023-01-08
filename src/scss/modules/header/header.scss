@@ -74,20 +74,20 @@
   align-items: center;
   width: 400px;
   height: 370px;
-  background: url("../assets/images/avatar-bg.svg") 0 0 / contain no-repeat;
+  background: url("../../../assets/images/avatar-bg.svg") 0 0 / contain no-repeat;
 
   &__wrapper {
     width: 350px;
     height: 350px;
     overflow: hidden;
     border-radius: 50%;
+  }
 
-    &>img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 

@@ -15,22 +15,18 @@
 }
 
 .card {
-  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin-top: 100px;
 
   &__photo {
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 200px;
     height: 200px;
-    top: -100px;
-    background: url("../../assets/images/bg-feedback.svg") center center / contain no-repeat;
+    background: url("../../../assets/images/bg-feedback.svg") center center / contain no-repeat;
   }
 
   &__photo-wrapper {
@@ -47,7 +43,6 @@
   }
 
   &__text-block {
-    padding: 100px 10px 10px;
     background: #EBF5FF;
     border-radius: 20px;
   }
@@ -74,4 +69,18 @@
     font-size: 16px;
     line-height: 140%;
   }
+}
+
+.feedback__card_feedback {
+  position: relative;
+  margin-top: 100px;
+}
+
+.card__photo_feedback {
+  position: absolute;
+  top: -100px;
+}
+
+.text-block_feedback {
+  padding: 100px 10px 10px;
 }
