@@ -523,11 +523,11 @@ a {
 }
 
 .service {
-  padding: 20px 0 40px;
+  padding: 20px 0 50px;
 }
 .service__items {
   display: flex;
-  margin: 0 -20px 30px -20px;
+  margin: 100px -20px 30px -20px;
   padding: 15px 0 10px 0;
 }
 .service__card {
@@ -535,25 +535,50 @@ a {
   display: flex;
   position: relative;
   padding: 20px;
+  text-align: center;
 }
-.service__card:before {
-  content: "";
+.service__photo {
   position: absolute;
-  top: 10px;
-  left: calc(50% - 25px);
-  width: 50px;
-  height: 50px;
-  background: url("../assets/images/check.svg") 0 0 no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -80px;
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  background: url("../assets/images/bg-feedback.svg") center center/contain no-repeat;
+}
+.service__photo-wrapper {
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.service__photo-wrapper > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .service__text-block {
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 10px;
+  padding: 80px 20px 10px;
   background: #EBF5FF;
   border-radius: 20px;
 }
+.service__name {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+}
 .service__description {
   flex: 1 1 auto;
+}
+.service__description > p {
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 130%;
 }
 
 .about-me {
