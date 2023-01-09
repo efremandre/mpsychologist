@@ -1,27 +1,96 @@
 @media screen and (max-width: 1200px) {
-	.container {
-		width: 960px
-	}
+
 }
 
 @media screen and (max-width: 990px) {
-	.container {
-		width: 720px
-	}
+
+  body {
+    font-size: 16px;
+  }
+
+  .title {
+    margin: 10px 0;
+  }
+
+  .service {
+    &__text-block {
+
+    }
+
+    &__name {
+      margin: 25px 0 10px;
+      font-size: 18px;
+    }
+
+    &__description {
+      &>p {
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+
+  }
+
+  .questions {
+    &__item {
+      box-shadow: none;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .reading {
+    &__link {
+      box-shadow: none;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    &__subtitle {
+      font-size: 18px;
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 120%;
+    }
+  }
+
+  .card {
+    margin-top: 65px;
+    &__photo {
+      top: -75px;
+      width: 150px;
+      height: 150px;
+    }
+
+    &__photo-wrapper {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .text-block {
+    padding: 65px 10px 10px;
+    box-shadow: none;
+    &:hover {
+      box-shadow: none;
+    }
+
+    &__name {
+      font-size: 20px;
+    }
+  }
 }
 
 @media screen and (max-width: 770px) {
-	.container {
-		width: 540px
-	}
 
-	.image-test {
-		width: 100px;
-	}
 }
 
 @media screen and (max-width: 570px) {
-	.container {
-		width: 95%
-	}
+
 }
