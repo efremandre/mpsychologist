@@ -371,6 +371,10 @@ a {
   color: #4D4D52;
 }
 
+.stop-scroll {
+  overflow: hidden;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -428,14 +432,67 @@ a {
   line-height: 140%;
 }
 
+.burger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 3px;
+  background: #4D4D52;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease-in-out;
+}
+.burger:before, .burger:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #4D4D52;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+.burger:before {
+  top: 0;
+}
+.burger:after {
+  bottom: 0;
+}
+.burger._active .burger__line {
+  opacity: 0;
+}
+.burger._active::before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.burger._active::after {
+  bottom: auto;
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
 .header {
   min-height: 100vh;
 }
 .header__row {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
   background: rgba(205, 225, 255, 0.2039215686);
 }
 .header__profile {
-  margin-top: 25px;
+  margin-top: 100px;
 }
 
 .navigation-row {
@@ -444,11 +501,16 @@ a {
   align-items: center;
 }
 
-.nav {
+.nav._active {
+  transform: translateX(0);
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-left: -15px;
 }
-
-.nav-link {
+.nav__link {
   display: block;
   padding: 20px 15px;
   font-weight: 700;
@@ -458,15 +520,17 @@ a {
   letter-spacing: 0.02em;
   transition: 1s;
 }
-.nav-link:hover {
+.nav__link:hover {
   color: #35B3A9;
 }
 
 .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-right: -15px;
 }
-
-.social-link {
+.social__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -476,10 +540,10 @@ a {
   background: #35B3A9;
   transition: 1s;
 }
-.social-link:hover {
+.social__link:hover {
   background: #11948b;
 }
-.social-link > img {
+.social__link > img {
   display: block;
   width: 100%;
   height: 100%;
@@ -723,7 +787,6 @@ a {
 }
 .feedback__items {
   display: flex;
-  justify-content: space-between;
   margin: 0 -20px 30px -20px;
   padding: 15px 0 10px 0;
 }
@@ -767,6 +830,8 @@ a {
 }
 
 .text-block {
+  display: flex;
+  flex-direction: column;
   padding: 100px 10px 10px;
   box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, 0.3);
   transition: 1s;
@@ -781,6 +846,9 @@ a {
   line-height: 30px;
 }
 .text-block__description {
+  flex: 1 1 auto;
+}
+.text-block__description > p {
   margin-top: 0;
   font-weight: 400;
   font-size: 16px;
@@ -817,7 +885,6 @@ a {
     margin: 10px 0;
   }
   .service__items {
-    display: flex;
     margin: 80px -15px 15px -15px;
     padding: 15px 0 10px 0;
   }
@@ -883,23 +950,23 @@ a {
     margin-top: 65px;
   }
   .card__photo {
-    top: -75px;
-    width: 150px;
-    height: 150px;
+    top: -65px;
+    width: 130px;
+    height: 130px;
   }
   .card__photo-wrapper {
     width: 100px;
     height: 100px;
   }
   .text-block {
-    padding: 65px 10px 10px;
+    padding: 55px 10px 10px;
     box-shadow: none;
   }
   .text-block:hover {
     box-shadow: none;
   }
   .text-block__name {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 770px) {
@@ -910,7 +977,30 @@ a {
     padding: 10px;
   }
   .nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(-100%);
+    background: #FFFFFF;
+    transition: 1s;
+  }
+  .nav__list {
+    width: 100%;
+    flex-direction: column;
+  }
+  .nav__list > li {
+    width: 100%;
+  }
+  .nav__link {
+    padding: 40px 15px;
+  }
+  .nav__link:hover {
+    color: inherit;
+  }
+  .burger {
+    display: block;
   }
   .main-title {
     margin-bottom: 15px;
@@ -933,6 +1023,9 @@ a {
   .service__items {
     margin: 80px -10px 15px -10px;
     padding: 10px 0 10px 0;
+  }
+  .service__card {
+    flex: 1 1 100%;
   }
   .service__photo {
     top: -60px;
@@ -957,5 +1050,25 @@ a {
   }
   .reading__image {
     display: none;
+  }
+  .footer__navigation-row {
+    justify-content: center;
+  }
+  .footer-nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 570px) {
+  .service__items {
+    display: block;
+  }
+  .service__card {
+    padding-bottom: 80px;
+  }
+  .feedback__items {
+    display: block;
+  }
+  .feedback__card {
+    padding-bottom: 30px;
   }
 }

@@ -32,6 +32,10 @@ a {
 	color: #4D4D52;
 }
 
+.stop-scroll {
+	overflow: hidden;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
