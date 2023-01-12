@@ -31,7 +31,6 @@
   .service {
 
     &__items {
-      display: flex;
       margin: 80px -15px 15px -15px;
       padding: 15px 0 10px 0;
     }
@@ -120,9 +119,9 @@
   .card {
     margin-top: 65px;
     &__photo {
-      top: -75px;
-      width: 150px;
-      height: 150px;
+      top: -65px;
+      width: 130px;
+      height: 130px;
     }
 
     &__photo-wrapper {
@@ -132,15 +131,17 @@
   }
 
   .text-block {
-    padding: 65px 10px 10px;
+    padding: 55px 10px 10px;
     box-shadow: none;
     &:hover {
       box-shadow: none;
     }
 
     &__name {
-      font-size: 20px;
+      font-size: 16px;
     }
+
+
   }
 }
 
@@ -157,7 +158,33 @@
   }
 
   .nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(-100%);
+    background: #FFFFFF;
+    transition: 1s;
+    &__list {
+      width: 100%;
+      flex-direction: column;
+
+      &>li {
+        width: 100%;
+      }
+    }
+
+    &__link {
+      padding: 40px 15px;
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+
+  .burger {
+    display: block;
   }
 
   .main-title {
@@ -191,6 +218,10 @@
     &__items {
       margin: 80px -10px 15px -10px;
       padding: 10px 0 10px 0;
+    }
+
+    &__card {
+      flex: 1 1 100%;
     }
 
     &__photo {
@@ -229,10 +260,39 @@
     }
   }
 
+  .footer {
+    &__navigation-row{
+      justify-content: center;
+    }
+  }
+
+  .footer-nav {
+    display: none;
+  }
+
 }
 
 @media screen and (max-width: 570px) {
 
+  .service {
+    &__items {
+      display: block;
+    }
 
+    &__card {
+      padding-bottom: 80px;
+    }
+  }
+
+
+  .feedback {
+    &__items {
+      display: block;
+    }
+
+    &__card {
+      padding-bottom: 30px;
+    }
+  }
 
 }
