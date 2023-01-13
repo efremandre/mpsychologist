@@ -21,6 +21,14 @@ body {
 	background-color: #CDE1FF;
 }
 
+button {
+	outline: none;
+}
+
+button:focus {
+	outline: none;
+}
+
 ul {
 	margin: 0;
 	padding: 0;
@@ -30,6 +38,10 @@ ul {
 a {
 	text-decoration: none;
 	color: #4D4D52;
+}
+
+a:focus {
+	outline: none;
 }
 
 .stop-scroll {
@@ -59,6 +71,21 @@ a {
 	padding: 20px 0;
 }
 
+.main-title {
+	&__name {
+		margin: 15px;
+		font-weight: 800;
+		font-size: 50px;
+		line-height: 55px;
+		text-transform: uppercase;
+	}
+
+	&__profession {
+		margin: 0 0 25px;
+		color: #6f6f75;
+	}
+}
+
 .order {
 	display: flex;
 	align-items: center;
@@ -71,23 +98,28 @@ a {
 	align-items: center;
 	width: 380px;
 	height: 60px;
-
+	padding: 0 5px;
 	color: #FFFFFF;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 100%;
 	letter-spacing: 0.02em;
-
 	background: #35B3A9;
 	border-radius: 15px;
 	box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, 1);
-	transition: 1s;
+	animation: glowing 5s infinite;
 
 	&:hover {
 		background: #11948b;
 		box-shadow: none;
 	}
+}
+
+@keyframes glowing {
+	0% { background-color: #11948b; box-shadow: none; }
+	50% { background-color: #35B3A9; }
+	100% { background-color: #11948b; box-shadow: none; }
 }
 
 .description {
