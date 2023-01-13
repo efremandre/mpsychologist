@@ -148,17 +148,17 @@
 @media screen and (max-width: 770px) {
 
   .header {
+
     &__row {
+      position: fixed;
       padding: 10px 0;
     }
   }
 
-  .social-link {
-    padding: 10px;
-  }
-
   .nav {
     position: fixed;
+    overflow: auto;
+    z-index: 99;
     top: 0;
     left: 0;
     width: 100%;
@@ -168,6 +168,7 @@
     transition: 1s;
     &__list {
       width: 100%;
+      margin: 80px 0 0;
       flex-direction: column;
 
       &>li {
@@ -176,11 +177,15 @@
     }
 
     &__link {
-      padding: 40px 15px;
+      padding: 20px 15px;
       &:hover {
         color: inherit;
       }
     }
+  }
+
+  .social {
+
   }
 
   .burger {
@@ -274,6 +279,36 @@
 
 @media screen and (max-width: 570px) {
 
+  .main-title__name {
+    margin: 15px 0;
+    font-size: 35px;
+  }
+
+  .header {
+    min-height: 100%;
+
+    &__profile {
+      margin-top: 65px;
+    }
+  }
+
+  .avatar {
+    width: 350px;
+    height: 320px;
+
+    &__wrapper {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  .profile {
+
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+
   .service {
     &__items {
       display: block;
@@ -284,6 +319,31 @@
     }
   }
 
+  .social {
+    &__link {
+      width: 40px;
+      height: 40px;
+
+      &:hover {
+        background: #35B3A9;
+      }
+
+      &>img {
+        width: 60%;
+      }
+    }
+  }
+
+  .questions {
+    &__item {
+      margin-bottom: 15px;
+    }
+
+    &__ask {
+      padding: 20px 30px 20px 20px;
+      font-size: 18px;
+    }
+  }
 
   .feedback {
     &__items {
@@ -294,5 +354,115 @@
       padding-bottom: 30px;
     }
   }
+}
 
+@media screen and (max-width: 320px) {
+
+  .main-section {
+    padding: 10px 0;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 110%;
+  }
+
+  .main-title__name {
+    margin: 15px 0;
+    font-size: 20px;
+    line-height: 110%;
+  }
+
+  .order {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+    height: 55px;
+    font-size: 12px;
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 130%;
+  }
+
+  .main-title__profession {
+    font-size: 16px;
+    line-height: 110%;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 180px;
+
+    &__wrapper {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .service {
+    &__items {
+      margin-top: 60px;
+    }
+
+    &__card {
+      padding-bottom: 60px;
+
+      &:last-child {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .questions {
+    &__ask {
+      padding-bottom: 15px;
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    &__answer {
+      padding: 0 20px 20px;
+      &>p {
+        font-size: 12px;
+        line-height: 130%;
+      }
+    }
+  }
+
+  ._init.questions__ask::after,
+  ._init.questions__ask:before {
+    top: 20px;
+    right: 11px;
+    width: 25px;
+  }
+
+  .reading {
+    &__content {
+      margin-bottom: 10px;
+    }
+
+    &__link {
+      padding: 10px;
+    }
+
+    &__subtitle {
+      margin: 10px 0;
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    &__description {
+      margin: 0 0 10px 0;
+      font-size: 12px;
+      line-height: 130%;
+    }
+  }
+
+  .feedback {
+    padding-bottom: 10px;
+  }
 }

@@ -7,11 +7,14 @@
 
   &__item {
     margin-bottom: 20px;
-    padding: 30px 60px 30px 30px;
     border-radius: 25px;
     background: #EBF5FF;
     box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, .3);
     transition: .5s;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &:hover {
       cursor: pointer;
@@ -21,7 +24,7 @@
 
   &__ask {
     position: relative;
-    padding: 0;
+    padding: 30px 60px 30px 30px;
     width: 100%;
     text-align: left;
     font-weight: 600;
@@ -37,8 +40,10 @@
   }
 
   &__answer {
+    padding: 0 30px 30px;
     &>p{
-      margin: 15px 0 0 0;
+      margin: 0;
+      line-height: 140%;
     }
 
     &._active {
@@ -51,11 +56,11 @@
 ._init.questions__ask:before {
   content: '';
   position: absolute;
-  top: 10px;
-  right: -20px;
-  width: 40px;
-  height: 6px;
-  background:  url('../../../assets/images/minus.svg') 0 0 no-repeat;
+  top: 50%;
+  right: 30px;
+  width: 30px;
+  height: 4px;
+  background: url('../../../assets/images/minus.svg') 0 0 / cover no-repeat;
   transition: .3s;
 }
 
