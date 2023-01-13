@@ -8,7 +8,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    background: #CDE1FF34;
+    background: #FFFFFF;
   }
 
   &__profile {
@@ -60,7 +60,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px ;
+    width: 50px;
+    height: 50px;
     margin-right: 15px;
     border-radius: 50%;
     background: #35B3A9;
@@ -72,8 +73,7 @@
 
     &>img{
       display: block;
-      width: 100%;
-      height: 100%;
+      max-width: 100%;
     }
   }
 }
