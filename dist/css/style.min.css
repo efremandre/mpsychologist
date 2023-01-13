@@ -444,7 +444,7 @@ a:focus {
   background: #35B3A9;
   border-radius: 15px;
   box-shadow: 5px 5px 3px 2px rgb(205, 225, 255);
-  animation: glowing 5s infinite;
+  animation: glowing 4s infinite;
 }
 .button:hover {
   background: #11948b;
@@ -454,14 +454,15 @@ a:focus {
 @keyframes glowing {
   0% {
     background-color: #11948b;
-    box-shadow: none;
+    box-shadow: 0 0 5px #35B3A9;
   }
   50% {
     background-color: #35B3A9;
+    box-shadow: 0 0 20px #11948b;
   }
   100% {
     background-color: #11948b;
-    box-shadow: none;
+    box-shadow: 0 0 5px #35B3A9;
   }
 }
 .description {
@@ -532,6 +533,7 @@ a:focus {
 }
 .header__profile {
   margin-top: 60px;
+  transition: 3s;
 }
 
 .navigation-row {
