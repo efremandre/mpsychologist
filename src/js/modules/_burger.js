@@ -7,7 +7,6 @@ export function _burger() {
 	const body = document.body;
 	const header = document?.querySelector('.header');
 	const headerHeight = header.offsetHeight;
-	console.log(headerHeight)
 	document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
 
 	burger?.addEventListener('click', () => {
