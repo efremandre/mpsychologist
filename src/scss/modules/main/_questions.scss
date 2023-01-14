@@ -11,6 +11,7 @@
     background: #EBF5FF;
     box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, .3);
     transition: .5s;
+    overflow: hidden;
 
     &:last-child {
       margin-bottom: 0;
@@ -45,14 +46,16 @@
   }
 
   &__answer {
-    padding: 0 30px 30px;
+    height: 0;
+    padding: 0 30px;
+    transition: .3s;
     &>p{
-      margin: 0;
+      margin: 0 0 30px;
       line-height: 140%;
     }
 
     &._active {
-      display: block;
+      height: auto;
     }
   }
 }

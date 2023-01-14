@@ -718,6 +718,7 @@ a:focus {
   background: #EBF5FF;
   box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, 0.3);
   transition: 0.5s;
+  overflow: hidden;
 }
 .questions__item:last-child {
   margin-bottom: 0;
@@ -746,14 +747,16 @@ a:focus {
   outline: none;
 }
 .questions__answer {
-  padding: 0 30px 30px;
+  height: 0;
+  padding: 0 30px;
+  transition: 0.3s;
 }
 .questions__answer > p {
-  margin: 0;
+  margin: 0 0 30px;
   line-height: 140%;
 }
 .questions__answer._active {
-  display: block;
+  height: auto;
 }
 
 ._init.questions__ask::after,
@@ -1239,11 +1242,12 @@ a:focus {
     line-height: 140%;
   }
   .questions__answer {
-    padding: 0 20px 20px;
+    padding: 0 20px;
   }
   .questions__answer > p {
-    font-size: 12px;
-    line-height: 130%;
+    margin-bottom: 15px;
+    font-size: 13px;
+    line-height: 140%;
   }
   ._init.questions__ask::after,
   ._init.questions__ask:before {
