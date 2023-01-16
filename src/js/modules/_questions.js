@@ -1,13 +1,10 @@
 'use strict'
 
 export function _questions() {
-	const arrButtons = document.querySelectorAll('.questions__ask');
-	const arrAnswer = document.querySelectorAll('.questions__answer')
+	const buttons = document.querySelectorAll('.questions__ask');
+	const answers = document.querySelectorAll('.questions__answer')
 
-	if (arrButtons.length > 0) {
-		const buttons = Array.from(arrButtons);
-		const answers = Array.from(arrAnswer);
-
+	if (buttons.length > 0) {
 		const initSpoiler = (arr) => {
 			arr.forEach(elem => {
 				elem.classList.add('_init');

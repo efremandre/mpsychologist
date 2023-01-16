@@ -166,7 +166,7 @@
     height: 100vh;
     transform: translateX(-100%);
     background: #FFFFFF;
-    transition: 1s;
+    transition: .5s;
     &__list {
       width: 100%;
       margin: 80px 0 0;
@@ -262,6 +262,19 @@
     }
   }
 
+  .feedback {
+    &__image {
+
+      &:before {
+        opacity: 1;
+      }
+
+      &>button {
+        opacity: 1;
+      }
+    }
+  }
+
   .footer {
     &__navigation-row{
       justify-content: center;
@@ -353,13 +366,14 @@
     &__link {
       width: 40px;
       height: 40px;
+      margin-right: 10px;
 
       &:hover {
         background: #35B3A9;
       }
 
       &>img {
-        width: 60%;
+        width: 40%;
       }
     }
   }
@@ -429,6 +443,10 @@
     &__wrapper {
       width: 150px;
       height: 150px;
+    }
+
+    &__img {
+      top: -20px;
     }
   }
 
