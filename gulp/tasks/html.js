@@ -14,12 +14,12 @@ export const html = () => {
 		// 	verbose: true,
 		// }))
 		.pipe(htmlbeautify({indentSize: 2}))
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				webpHtmlNosvg()
-			)
-		)
+		// .pipe(
+		// 	app.plugins.if(
+		// 		app.isBuild,
+		// 		webpHtmlNosvg()
+		// 	)
+		// )
 		.pipe(
 			app.plugins.if(
 				app.isBuild,

@@ -12,26 +12,22 @@ export function _feedbackButton() {
 
 
     button.forEach(el => {
-
         el.addEventListener('click', (event) => {
-            console.log(scrollWidthPopup)
             let elementEvent = event.target;
             let srcImg = el.previousElementSibling.src;
             if (elementEvent) {
-                console.log(scrollWidth);
-                body.classList.add('stop-scroll');
-                body.style.paddingRight = `${scrollWidth}px`;
                 popup.classList.add('_popup-visible');
                 image.src = srcImg;
+                body.classList.add('stop-scroll');
+                body.style.paddingRight = `${scrollWidth}px`;
             }
         })
     })
 
     popup.addEventListener('click', () => {
+        popup.classList.remove('_popup-visible');
         body.classList.remove('stop-scroll');
         body.style.paddingRight = `0px`;
-        popup.classList.remove('_popup-visible');
-
     })
 
 }
