@@ -1,28 +1,7 @@
 @use '../../node_modules/normalize.css/normalize';
 @use './fonts.scss';
-@use './header.scss';
-@use './main.scss';
-@use './footer.scss';
-@use './media-query.scss';
-
-html,
-body {
-	height: 100%;
-	font-family: 'Roboto', sans-serif;
-	color: #fff;
-}
-
-.wrapper {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-.container {
-	max-width: 1400px;
-	margin: 0 auto;
-}
-
-h2 {
-	text-align: center;
-}
+@use 'modules/global-style';
+@use 'modules/header/header';
+@use 'modules/main/main';
+@use 'modules/footer/footer';
+@use 'media-query';

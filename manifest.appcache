@@ -1,0 +1,24 @@
+CACHE MANIFEST
+# 17-01-2023 v1.0
+
+CACHE:
+# pages
+index.html
+
+# styles & scripts
+css/style.min.css
+js/index.min.js
+
+#fontd
+assets/fonts/
+
+# images
+assets/images/favicon.ico
+assets/images/ava.jpg
+assets/images/feedback1.jpg
+assets/images/feedback2.jpg
+assets/images/feedback3.jpg
+assets/images/feedback3.jpg
+assets/images/tg.svg
+assets/images/vk.svg
+assets/images/wa.svg

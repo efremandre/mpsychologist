@@ -22,6 +22,7 @@
 		"gulp-debug": "^4.0.0",
 		"gulp-file-include": "^2.3.0",
 		"gulp-fonter-fix": "^0.0.1",
+		"gulp-gh-pages": "^0.5.4",
 		"gulp-group-css-media-queries": "^1.2.2",
 		"gulp-if": "^3.0.0",
 		"gulp-imagemin": "^8.0.0",
@@ -40,6 +41,8 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
+		"gulp-html-beautify": "^1.0.1",
+		"gulp-htmlmin": "^5.0.1",
 		"normalize.css": "^8.0.1"
 	}
 }
