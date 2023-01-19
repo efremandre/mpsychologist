@@ -322,7 +322,17 @@
     line-height: 130%;
   }
 
+  .button-up {
+    bottom: 5px;
+    right: 0;
+  }
+
   .header {
+
+    &__social {
+      display: none;
+    }
+
     &__profile {
       margin-top: 65px;
     }
