@@ -29,8 +29,8 @@
     width: 100%;
     text-align: left;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 20px;
     background: none;
     outline: none;
     border: none;
@@ -51,7 +51,8 @@
     transition: .3s;
     &>p{
       margin: 0 0 30px;
-      line-height: 140%;
+      font-size: 16px;
+      line-height: 130%;
     }
 
     &._active {
@@ -76,11 +77,11 @@
   transform: rotate(90deg);
 }
 
-._init.questions__ask._active::after {
+._init.questions__ask._rotate::after {
   transform: rotate(0);
 }
 
-._init.questions__ask._active::before {
+._init.questions__ask._rotate::before {
   opacity: 0;
 }
 
