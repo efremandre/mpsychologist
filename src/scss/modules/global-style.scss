@@ -62,8 +62,8 @@ a:focus {
 }
 
 .title {
-	font-weight: 800;
-	font-size: 30px;
+	font-weight: 700;
+	font-size: 26px;
 	line-height: 130%;
 	text-align: center;
 }
@@ -110,7 +110,7 @@ a:focus {
 	background: #35B3A9;
 	border-radius: 15px;
 	box-shadow: 5px 5px 3px 2px rgba(205, 225, 255, 1);
-	animation: glowing 4s infinite;
+	animation: glowing 6s infinite;
 
 	&:hover {
 		background: #11948b;
@@ -126,6 +126,6 @@ a:focus {
 
 .description {
 	font-weight: 600;
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 140%;
 }

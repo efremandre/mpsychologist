@@ -1,0 +1,38 @@
+.button-up {
+  position: fixed;
+  z-index: 90000;
+  bottom: 20px;
+  right: 20px;
+
+  &._hidden-button {
+    display: none;
+  }
+  &__link {
+    position: relative;
+    opacity: .8;
+    box-shadow: 3px 3px 3px 2px rgba(205, 225, 255, .3);
+   &:before,
+   &:after {
+     content: '';
+     position: absolute;
+     top: calc(50% - 7px);
+     width: 2px;
+     height: 14px;
+     background: #FFF;
+   }
+
+    &:before {
+      left: 15px;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      right: 15px;
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      box-shadow: 3px 3px 3px 2px rgba(205, 225, 255, 1);
+    }
+  }
+}

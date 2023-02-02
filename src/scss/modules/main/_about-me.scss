@@ -27,4 +27,13 @@
       margin: 0 0 20px 0;
     }
   }
+
+  &__link {
+    text-decoration: underline;
+    transition: .5s;
+  }
+
+  &__link:hover {
+    text-decoration: none;
+  }
 }
