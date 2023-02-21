@@ -13,8 +13,6 @@
 * составление файлов robots.txt, sitemap.xml
 * регистрация сайта в Яндекс ВебМастер и Google Search Console
 
-
-
 ## Стек
 * Figma
 * Gulp (собственной сборки)
